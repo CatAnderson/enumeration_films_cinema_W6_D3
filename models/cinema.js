@@ -32,6 +32,12 @@ Cinema.prototype.checkFilmLength = function(length) {
   return this.films.every((film) => {
     return film.length > length;
   });
-}
+};
+
+Cinema.prototype.calculateLengthOfFilms = function(){
+  return this.films.reduce((runningTotal, film) => {
+    return runningTotal + film.length;
+  }, 0);
+};
 
 module.exports = Cinema;
