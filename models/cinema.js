@@ -20,13 +20,18 @@ Cinema.prototype.filterByGenre = function(genre) {
   return this.films.filter((film) => {
     return film.genre === genre;
   });
-}
+};
 
 Cinema.prototype.checkFilmsByYear = function(year){
   return this.films.some((film) => {
     return film.year === year;
   });
-}
+};
 
+Cinema.prototype.checkFilmLength = function(length) {
+  return this.films.every((film) => {
+    return film.length > length;
+  });
+}
 
 module.exports = Cinema;

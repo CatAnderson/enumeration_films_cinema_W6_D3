@@ -52,7 +52,10 @@ describe('Cinema', function () {
     assert.strictEqual(cinema.checkFilmsByYear(2022), false);
   });
 
-  it('should be able to check whether all films are over a particular length');
+  it('should be able to check whether all films are over a particular length', function() {
+    assert.strictEqual(cinema.checkFilmLength(90), true);
+  });
+
   it('should be able to calculate total running time of all films');
 
 });
