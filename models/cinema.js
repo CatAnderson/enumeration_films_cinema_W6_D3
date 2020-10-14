@@ -8,23 +8,16 @@ Cinema.prototype.filmByTitle = function(){
     return film.title
   });
   
-}
+};
 
-// const filmByTitle = (title) => {
-//   return title += title;
-// }
+Cinema.prototype.findFilmByTitle = function(title){
+  return this.films.find((film) => {
+    return film.title === title;
+  });
+};
 
-// const result = myNumbers.map(filmByTitle);
 
 
-// // myNumbers.map = functino(multiplyByTwo) {
-//     // const result = []
-//     // for (number of myNumbers){
-//         // doubleNumber = multuplyByTwo
-//         // push doubleNumber to result
-// //     }
-// //  return result
-// // }
 
 
 
