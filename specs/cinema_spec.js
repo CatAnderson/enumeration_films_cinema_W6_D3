@@ -38,13 +38,14 @@ describe('Cinema', function () {
     const actual = moonlight;
     assert.deepStrictEqual(actual, cinema.findFilmByTitle('Moonlight'));
   });
-    
 
 
+  it('should be able to filter films by genre', function() {
+    const actual = cinema.filterByGenre('action');
+    assert.deepStrictEqual(actual,[blackPanther]); 
+  });
 
-  it('should be able to filter films by genre');
 
-  
 
 
   it('should be able to check whether there are some films from a particular year');
